@@ -1,0 +1,15 @@
+{
+    "name": "app1",
+    "version": "0.0.1",
+    "private": true,
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "scripts": {
+        "serve": "vue-cli-service serve"
+    },
+    "dependencies": {
+        "comete-common-lib": "file:../common-lib"
+    },
+    "devDependencies": {}
+}

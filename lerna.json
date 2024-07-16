@@ -1,0 +1,15 @@
+{
+
+    "packages": [
+        "app1",
+        "app2"
+    ],
+    "version": "0.1.0",
+    "npmClient": "npm",
+    "commands": {
+        "serve": {
+            "parallel": true,
+            "script": "npm run serve"
+        }
+    }
+}

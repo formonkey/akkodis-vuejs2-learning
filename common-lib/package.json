@@ -1,0 +1,13 @@
+{
+    "name": "common-lib",
+    "version": "0.0.1",
+    "main": "index.js",
+    "private": true,
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {}
+}
