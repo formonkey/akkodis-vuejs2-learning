@@ -1,5 +1,7 @@
 <template>
-    <h1>Text title</h1>
+    <div class="checkbox">
+        <h1 class="checkbox__span">Text title</h1>
+    </div>
 </template>
 
 <script>
