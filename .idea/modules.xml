@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ihm-comete-develop-learning.iml" filepath="$PROJECT_DIR$/.idea/ihm-comete-develop-learning.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../ihm_comete-develop/.idea/ihm_comete-develop.iml" filepath="$PROJECT_DIR$/../ihm_comete-develop/.idea/ihm_comete-develop.iml" />
     </modules>
   </component>
 </project>

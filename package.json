@@ -1,43 +1,44 @@
 {
-  "name": "monorepo",
-  "private": true,
-  "workspaces": [
-    "common-lib",
-    "app1",
-    "app2"
-  ],
-  "scripts": {
-    "serve": "lerna exec -- npm run serve"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "^4.5.0",
-    "@vue/cli-plugin-unit-jest": "^4.5.15",
-    "@vue/cli-plugin-vuex": "^4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "@vue/test-utils": "^1.2.2",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^27.3.1",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "lerna": "^8.1.6",
-    "sass": "^1.19.0",
-    "sass-loader": "^10.1.1",
-    "svg-url-loader": "^7.1.1",
-    "vue-jest": "^3.0.7"
-  }
+    "name": "monorepo",
+    "private": true,
+    "workspaces": [
+        "common-lib",
+        "app1",
+        "app2"
+    ],
+    "scripts": {
+        "serve": "lerna exec -- npm run serve"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "core-js": "^3.6.5",
+        "vue": "^2.6.11"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-router": "^4.5.0",
+        "@vue/cli-plugin-unit-jest": "^4.5.15",
+        "@vue/cli-plugin-vuex": "^4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/eslint-config-standard": "^5.1.2",
+        "@vue/test-utils": "^1.2.2",
+        "vue-template-compiler": "^2.6.11",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^27.3.1",
+        "eslint": "^6.7.2",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "eslint-plugin-vue": "^6.2.2",
+        "lerna": "^8.1.6",
+        "sass": "^1.19.0",
+        "sass-loader": "^10.1.1",
+        "svg-url-loader": "^7.1.1",
+        "vue-jest": "^3.0.7"
+    }
 }

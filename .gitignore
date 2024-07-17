@@ -1,3 +1,9 @@
+/.idea/
 /node_modules/
+
 /app2/node_modules/
+
 /app1/node_modules/
+
+/common-lib/node_modules/
+/common-lib/dist/

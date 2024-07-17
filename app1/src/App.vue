@@ -2,12 +2,19 @@
     <div>
         <h1>Hello, World! - {{ message }} ({{ count }})</h1>
         <button @click="increment">Incrementar</button>
+
+        <TextTitle />
     </div>
 </template>
 
 <script>
+import { TextTitle } from '@common-lib/components';
+
 export default {
     name: 'App',
+    components: {
+        TextTitle,
+    },
     data() {
         return {
             message: "App 1",

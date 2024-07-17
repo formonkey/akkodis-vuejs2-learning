@@ -9,7 +9,6 @@
         "serve": "vue-cli-service serve"
     },
     "dependencies": {
-        "comete-common-lib": "file:../common-lib"
-    },
-    "devDependencies": {}
+        "common-lib": "file:../common-lib"
+    }
 }
