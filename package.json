@@ -7,7 +7,8 @@
         "app2"
     ],
     "scripts": {
-        "serve": "lerna exec -- npm run serve"
+        "preserve": "node -e \"if (process.version !== 'v14.17.6') { console.error('Error: incorrect Node.js version!'); process.exit(1); }\"",
+        "serve": "lerna run serve"
     },
     "dependencies": {
         "axios": "^0.21.1",
@@ -25,7 +26,6 @@
         "@vue/cli-service": "~4.5.0",
         "@vue/eslint-config-standard": "^5.1.2",
         "@vue/test-utils": "^1.2.2",
-        "vue-template-compiler": "^2.6.11",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^27.3.1",
@@ -35,10 +35,17 @@
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-standard": "^4.0.0",
         "eslint-plugin-vue": "^6.2.2",
-        "lerna": "^8.1.6",
         "sass": "^1.19.0",
         "sass-loader": "^10.1.1",
         "svg-url-loader": "^7.1.1",
-        "vue-jest": "^3.0.7"
+        "vue-jest": "^3.0.7",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "optionalDependencies": {
+        "lerna": "^4.0.0"
+    },
+    "engines": {
+        "node": "14.17.6",
+        "npm": "6.14.15"
     }
 }
