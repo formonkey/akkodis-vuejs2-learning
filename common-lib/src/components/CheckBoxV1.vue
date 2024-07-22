@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, ref } from 'vue';
 
 const props = defineProps({
     id: {
@@ -44,7 +44,7 @@ const props = defineProps({
     }
 })
 
-const checkedValues = props.selectedValues;
+const checkedValues = ref(props.selectedValues);
 </script>
 
 <style>

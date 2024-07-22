@@ -4,26 +4,51 @@
         <button @click="increment">Incrementar</button>
 
         <TextTitle />
+
+        <SelectTestV2
+            name="testv2"
+            id="SelectTestv2"
+            label="Select Test V2"
+            :options="[{ value: 'A', label: 'A' }, { value: 'B', label: 'B' }]"
+            :value="selectTestV2Value"
+            @update:value="handleUpdateValue"
+        />
     </div>
 </template>
 
 <script>
-import { TextTitle } from '@common-lib/components';
+import {TextTitle, SelectTestV2, SelectTestV1} from '@common-lib/components';
 
 export default {
     name: 'App',
     components: {
+        SelectTestV1,
         TextTitle,
+        SelectTestV2,
     },
     data() {
         return {
             message: "App 1",
-            count: 0
+            count: 0,
+            selectV2Value: '',
         };
     },
     methods: {
         increment() {
             this.count++;
+        },
+        handleUpdateValue(value) {
+            this.selectTestV2Value = value;
+        }
+    },
+    computed: {
+        selectTestV2Value: {
+            get() {
+                return this.selectV2Value;
+            },
+            set(value) {
+                this.selectV2Value = value;
+            }
         }
     },
     watch: {
@@ -31,9 +56,6 @@ export default {
             console.log(`Valor de count cambió: ${oldValue} -> ${newValue}`);
         }
     },
-    mounted() {
-        console.log('Componente montado');
-    }
 };
 </script>
 
