@@ -8,7 +8,9 @@
     ],
     "scripts": {
         "preserve": "node -e \"if (process.version !== 'v14.17.6') { console.error('Error: incorrect Node.js version!'); process.exit(1); }\"",
-        "serve": "lerna run serve"
+        "serve": "concurrently \"npm run start:app1\" \"npm run start:app2\"",
+        "start:app1": "npm run serve --prefix ./app1",
+        "start:app2": "npm run serve --prefix ./app2"
     },
     "dependencies": {
         "axios": "^0.21.1",
