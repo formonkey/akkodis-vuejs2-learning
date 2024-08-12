@@ -17,15 +17,15 @@ export default {
                 closeModal: this.closeModal,
             }
 
-            const x = await new Promise((resolve) => {
+            const res = await new Promise((resolve) => {
                 this.openModal(ComponentC, data, (flag) => {
                     resolve(flag)
                 });
             })
 
-            console.log('This is a X value', x);
+            console.log('This is a X value', res);
 
-            if (x) {
+            if (res) {
                 console.log('This is a Accept Flow');
             } else {
                 console.log('This is a Cancel Flow')
