@@ -1,10 +1,10 @@
 <!-- Modal.vue -->
 <template>
     <div>
-
-        <div v-if="isVisible" class="modal-overlay" @click.self="handleClose">
+        <div v-if="isVisible" class="modal-overlay" @click.self="close">
             <div class="modal-content">
-                <button @click="handleClose" class="modal-close-button">X</button>
+                <button @click="close" class="modal-close-button">X</button>
+
                 <component :is="currentComponent" :data="componentData" />
             </div>
         </div>
@@ -19,7 +19,7 @@ export default {
     provide() {
         return {
             openModal: this.open,
-            closeModal: this.handleClose
+            closeModal: this.close
         };
     },
     data() {
@@ -32,17 +32,16 @@ export default {
     },
     methods: {
         open(component, data, callback) {
-            console.log('TEST :: OPEN MODAL');
             this.isVisible = true;
             this.currentComponent = component;
             this.componentData = data;
             this.whenClose = callback || null;
         },
-        handleClose() {
-            console.log('TEST :: CLOSE MODAL');
+        close(data) {
             this.isVisible = false;
+
             if (this.whenClose) {
-                this.whenClose();
+                this.whenClose(data);
             }
         }
     }

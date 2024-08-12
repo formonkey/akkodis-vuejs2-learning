@@ -9,18 +9,28 @@ import ComponentC from "./ComponentC.vue";
 
 export default {
     name: 'ComponentA',
-    inject: ['openModal'],
+    inject: ['openModal', 'closeModal'],
     methods: {
-        showModal() {
-            const content = ComponentC;
+        async showModal() {
             const data = {
-                test: 'Prueba Componente A'
+                test: 'Prueba Componente A',
+                closeModal: this.closeModal,
             }
 
-            this.openModal(content, data, () => {
-                console.log('Modal cerrado desde ComponentA');
-            });
-        }
+            const x = await new Promise((resolve) => {
+                this.openModal(ComponentC, data, (flag) => {
+                    resolve(flag)
+                });
+            })
+
+            console.log('This is a X value', x);
+
+            if (x) {
+                console.log('This is a Accept Flow');
+            } else {
+                console.log('This is a Cancel Flow')
+            }
+        },
     }
 };
 </script>

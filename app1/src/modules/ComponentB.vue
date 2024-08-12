@@ -9,15 +9,15 @@ import ComponentC from "./ComponentC.vue";
 
 export default {
     name: 'ComponentB',
-    inject: ['openModal'],
+    inject: ['openModal', 'closeModal'],
     methods: {
         showModal() {
-            const content = ComponentC;
             const data = {
-                test: 'Prueba Componente B'
+                test: 'Prueba Componente B',
+                closeModal: this.closeModal,
             }
 
-            this.openModal(content, data, () => {
+            this.openModal(ComponentC, data, () => {
                 console.log('Modal cerrado desde ComponentB');
             });
         }
