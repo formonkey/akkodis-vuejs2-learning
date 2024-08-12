@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <Modal>
         <h1>Hello, World! - {{ message }} ({{ count }})</h1>
         <button @click="increment">Incrementar</button>
 
@@ -13,17 +13,28 @@
             :value="selectTestV2Value"
             @update:value="handleUpdateValue"
         />
-    </div>
+
+        <ComponentA />
+
+        <ComponentB />
+    </Modal>
 </template>
 
 <script>
 import {TextTitle, SelectTestV2, SelectTestV1} from '@common-lib/components';
 
+import Modal from "./shared/Modal.vue";
+import ComponentA from "./modules/ComponentA.vue";
+import ComponentB from "./modules/ComponentB.vue";
+
 export default {
     name: 'App',
     components: {
-        SelectTestV1,
+        Modal,
         TextTitle,
+        ComponentB,
+        ComponentA,
+        SelectTestV1,
         SelectTestV2,
     },
     data() {
